@@ -8,17 +8,25 @@ class Student:
         print (f"My name is {name},I am {age} years old and I am in the {tracks} with a score of {score} ")
         pass
         #methods
-    def changes (self,change_name,change_age,add_track,get_score):
-        self.change_name = "Peter"
-        self.change_age = 34
-        self.add_track = "UI/UX"
-        self.get_score = self.score 
+    def change_name(self, new_name):
+        self.name = new_name
+        print(f"changed name to {new_name}")
+
+    def change_age(self, new_age):
+        self.age = new_age
+
+    def add_track(self, new_track):
+        self.tracks.append(new_track)
+        print(f"this {new_track} has been added")
+
+    def get_score(self):
+        return self.score
 
 
 Bob = Student(name="Bob", age=26, tracks=["FE","BE"],score=20.90)
 
 # Expected methods0
-print(Bob.change_name("Peter")
+Bob.change_name("Peter")
 Bob.change_age(34)
 Bob.add_track("UI/UX")
-Bob.get_score()
+print(Bob.get_score())
